@@ -1,0 +1,182 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root{
+    --fonte-Titulo: "Young Serif",
+        serif;
+    --fonte-Texto:"Outfit",
+        sans-serif;
+    --fonte-Intrucoes: "Gabarito",
+        sans-serif;
+
+    --body-Background: #F3E5D7;
+    
+    --titulo-Color: #312E2C;
+    --destaque-Color:#854632;
+    --texto-Color:#5F564D;
+    
+    --barra-Color: #E3DDD7;
+    
+    --rosa-Titulo:#7A284E;
+    --rosa-Background:#FFF7FB;
+    
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--body-Background);
+    padding: 50px 0px;
+}
+
+main{
+    max-width: 740px;
+    margin: auto;
+    background-color: white;
+    border-radius: 24px;
+}
+
+article{
+    padding: 40px 40px 10px 40px;
+}
+
+article img{
+    width: 100%;
+}
+
+article hr{
+    border: none;
+    height: 2px;
+    background-color: var(--barra-Color);
+    
+}
+
+article h1{
+    font-family: var(--fonte-Titulo);
+    font-size: 2.5em;
+    font-weight: normal;
+    color: var(--titulo-Color);
+    margin: 40px 0px 24px 0px;
+}
+
+article h2{
+    font-family: var(--fonte-Titulo);
+    font-size: 1.75em;
+    font-weight: normal;
+    color: var(--destaque-Color);
+    padding-bottom: 20px;
+
+}
+
+
+article p{
+    font-family: var(--fonte-Texto);
+    font-size: 1em;
+    color: var(--texto-Color);
+    font-weight: normal;
+}
+
+article ul{
+    list-style-position: inside;
+}
+
+article ol{
+    list-style-position: inside;
+}
+
+article li{
+    font-family: var(--fonte-Texto);
+    font-size: 1em;
+    color: var(--texto-Color);
+    font-weight: normal;
+    margin: 8px 0px;
+}
+
+li::marker{
+    color: var(--destaque-Color);
+    font-weight: bold;
+}
+
+
+article strong{
+    font-weight: bold;
+}
+section{
+    margin: 32px 0px;
+}
+
+.tempo_de_preparo {
+    background-color: var(--rosa-Background);
+    padding: 24px;
+}
+
+
+.tempo_de_preparo h2 {
+    font-size: 1.25em;
+    color: var(--rosa-Titulo);
+    padding-bottom: 16px;
+}
+
+.tabela_nutricional p {
+    margin-bottom: 24px;
+
+}
+
+
+
+.tabela_nutricional table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela_nutricional td{
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--barra-Color)
+}
+
+.value{
+    color:var(--destaque-Color);
+        font-weight: bolder;
+}
+
+.tabela_nutricional tr:last-child td{
+    border-bottom: none;
+}
+
+
+
+@media (max-width:840px) {
+    main{
+        max-width: 620px;
+    }
+
+
+}
+
+@media(max-width:650px){
+    body{
+        padding: 0px;
+    }
+    main{
+        max-width: 650px;
+        border-radius: 0px;
+        padding-top: 0px;
+    }
+    article{
+        padding-top: 0px;
+    }
+    .introducao{
+        margin-top: 0px;
+    }
+    .introducao img {
+            width: calc(100% + 80px);
+            /* Expande a largura para cobrir o padding */
+            margin-left: -40px;
+            /* Ajusta para centralizar, metade do padding */
+            margin-right: -40px;
+            /* Ajusta para centralizar */
+        }
+}
